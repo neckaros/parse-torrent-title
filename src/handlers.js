@@ -71,6 +71,7 @@ exports.addDefaults = /** @type Parser */ parser => {
     parser.addHandler("audio", /Dual[- ]Audio/i, { type: "lowercase" });
     parser.addHandler("audio", /AC-?3(?:\.5\.1)?/i, { value: "ac3" });
     parser.addHandler("audio", /DD5[. ]?1/i, { value: "dd5.1" });
+    parser.addHandler("audio", /DDP5[. ]?1/i, { value: "ddp5.1" });
     parser.addHandler("audio", /AAC(?:[. ]?2[. ]0)?/, { value: "aac" });
 
     // Group
