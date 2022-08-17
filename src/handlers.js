@@ -73,6 +73,8 @@ exports.addDefaults = /** @type Parser */ parser => {
     parser.addHandler("audio", /DD5[. ]?1/i, { value: "dd5.1" });
     parser.addHandler("audio", /DDP5[. ]?1/i, { value: "ddp5.1" });
     parser.addHandler("audio", /AAC(?:[. ]?2[. ]0)?/, { value: "aac" });
+    parser.addHandler("audio", /AAC(?:[. ]?5[. ]1)?/, { value: "aac5.1" });
+    parser.addHandler("audio", /5[. ]?1/i, { value: "5.1" });
 
     // Group
     parser.addHandler("group", /- ?([^\-. ]+)$/);
